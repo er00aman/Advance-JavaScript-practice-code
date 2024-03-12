@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope chain and lexical scope</title>
+</head>
+<body>
+    <script>
+
+        // === inner function parents function ke variable ko access kr sakte hai but parents function inner function ke variable ko access kr sakte hai but parents function inner function ke variable ko access nhi kr sakte hai ===
+        var a = 'hello guys...';
+        function first(){
+            var b = 'hello how are you.....';
+            second();
+            function second(){
+                var c = 'im aman and your name ';
+                console.log(a+b+c);
+            }
+        }
+        first();
+
+        let a = 'hello';
+        let b = 'world';
+
+        function main(){
+            var c = 'hello , how are you.....';
+            var d = 'im fine';
+            child();
+            function child(){
+                var e = ' or baatao kaise ho';
+                console.log(a+b+c+d+e);
+            }
+        }
+        main()
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> closure function </title>
+</head>
+<body>
+    <script>
+        // const add = (a)=>{
+        //     let b = 10;
+        //     let innerFunction = ()=>{
+        //         let sum = a+b;
+        //         console.log(`the sum of two no is ${sum}`);
+        //     }
+        //     innerFunction();
+        // }
+        // add(5);
+
+        let name = (a,b)=>{
+            let fullName =() =>{
+                console.log(`my name is ${a}. my age is ${b}.`);
+            }
+            fullName();
+        }
+        name("Aman",20);
+    </script>
+</body>
+</html>

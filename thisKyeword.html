@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keywords</title>
+</head>
+<body>
+    <script>
+        // === this kyeword represent in scope parent object ===
+        console.log(this);
+
+        // yaha pr this Kyeword represent krega window object ko because es this kewords ka object window onject hi hoga ===
+
+        // in a regular function, this refers to the global object.\
+        function sum(){
+            var add = 2+2;
+            console.log('sum of two no is '+add);
+            console.log(this);
+        }
+        sum();
+
+        // in a method, this refers to the owner object
+        const student = {
+            name : 'Aman kumar',
+            qualification : 'bca',
+            sum : function(){
+                var add = 2+2;
+                console.log('sum of two no is '+add);
+                console.log(this);
+            }
+        }
+        student.sum();
+
+        // example of this keyword
+
+        // Define an object called "person"
+        var person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        }
+        };
+
+        // Call the fullName method of the person object
+        console.log(person.fullName());  // Output: John Doe
+
+    </script>
+</body>
+</html>
